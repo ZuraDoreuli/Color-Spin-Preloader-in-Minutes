@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #f8f8f8;
+}
+div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+span {
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
+}
+span:nth-child(1) {
+  background-color: #0ce9c0;
+  animation-delay: -1.5s;
+}
+span:nth-child(2) {
+  background-color: #f51a1a;
+  animation-delay: -1s;
+}
+span:nth-child(3) {
+  background-color: #ffd900;
+  animation-delay: -0.5s;
+}
+span:nth-child(4) {
+  background-color: #311fce;
+}
